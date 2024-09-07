@@ -1,18 +1,8 @@
-const string = "I am learning Programming to become a programmer"
+const sentences = "I am learning Programming to become a programmer";
 
-function findLargestWord(str) {
-    const strArray = str.split(' ');
-    const lengthArray = [];
-
-    for (let arr of strArray) {
-        lengthArray.push(arr.length);
-    }
-    const large = Math.max(...lengthArray);
-    const longestWordIndex = lengthArray.indexOf(large);
-    const longestWord = strArray[longestWordIndex]
-
-    return longestWord;
+function longestWord(sentences) {
+    const strArray = sentences.split(' ');
+    return strArray.reduce((longWord, currentWord) => longWord.length > currentWord.length ? longWord : currentWord);
 }
 
-const result = findLargestWord(string);
-console.log(result);
+console.log(longestWord(sentences));
