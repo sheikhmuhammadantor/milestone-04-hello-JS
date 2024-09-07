@@ -1,4 +1,4 @@
-let numbers = [12, 45, 78, 23, 56, 89, 34, 67, 7];
+const numbers = [12, 45, 78, 23, 56, 89, 34, 67, 7];
 
 function aveOddNumber(numbers) {
     let sum = 0;
